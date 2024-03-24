@@ -14,7 +14,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     password = Column(String)
     referral_code = Column(String, unique=True)
-    is_active = Column(Boolean, default=True)
+    ref_code_is_active = Column(Boolean, default=False)
     created_at = Column(DateTime, default=date.today)
     expiry_date = Column(DateTime)
 
