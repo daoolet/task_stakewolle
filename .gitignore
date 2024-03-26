@@ -55,6 +55,9 @@ cover/
 *.mo
 *.pot
 
+# FastAPI stuff
+sql_app.db
+
 # Django stuff:
 *.log
 local_settings.py
