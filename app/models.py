@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy.orm import Session
 
-from datetime import date
 
 from .database import Base
 from .schemas import UserCreate
@@ -15,8 +14,8 @@ class User(Base):
     password = Column(String)
     referral_code = Column(String, unique=True)
     ref_code_is_active = Column(Boolean, default=False)
-    created_at = Column(DateTime, default=date.today)
-    expiry_date = Column(DateTime)
+    ref_code_created_at = Column(DateTime)
+    ref_code_expiry_date = Column(DateTime)
 
 
 class Referral(Base):
